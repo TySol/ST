@@ -1,4 +1,5 @@
 <nav class="navbar navbar-default" role="navigation">
+ <div class="container">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">My STG</a>
+      <%= link_to "Software Technology Group",  root_path, class: "navbar-brand" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -21,7 +22,7 @@
         <button type="submit" class="btn btn-default">Go</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Sign In", root_path %></li>
+        <li><%= link_to "Log In", root_path %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -35,4 +36,5 @@
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
+</div><!-- /.container -->
 </nav>
