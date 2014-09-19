@@ -10,9 +10,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'spring'
-gem 'sdoc'
+gem 'sdoc', '~> 0.4.0'
 gem 'devise', '~> 3.3.0'
 gem 'paperclip', github: 'thoughtbot/paperclip'
+
 
 group :development, :test do
      gem 'sqlite3'
@@ -21,6 +22,7 @@ end
 group :production do
      gem 'pg'
      gem 'rails_12factor'
+     gem 'aws-sdk', '~> 1.53.0'
 end
 
 
