@@ -1,6 +1,5 @@
-<h1>Project Listings</h1>
-
 <% if user_signed_in? %>
+<h1>Project Listings</h1>
   <%= link_to 'New Pin', new_pin_path %>
 <% end %>
 
@@ -8,17 +7,26 @@
     <% @pins.each do |pin| %>
       <div class="box panel panel-dafault">
         <% if pin.user == current_user %>
-        <%= image_tag pin.image.url(:medium) %>
+     <%= link_to image_tag(pin.image.url(:medium)), pin %>
           <div class="panel-body">
-            <%= pin.description %>
+            <%= pin.description %><br/>
             <%= pin.user.email if pin.user %>
-            <%= link_to 'Show', pin %>
-            <%= link_to 'Edit', edit_pin_path(pin) %>
-            <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <div class="actions">
+           <%= link_to edit_pin_path(pin) do %>
+              <span class="glyphicon glyphicon-edit"></span>
+              Edit
+            <% end %>
+            <%= link_to pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <span class="glyphicon glyphicon-trash"></span>
+              Delete
+            <% end %>
+            </div>
         <% end %>
       </div>
       </div>
     <% end %>
-
 </div>
 
+<div class="center">
+<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+</div>
