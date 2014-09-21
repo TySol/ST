@@ -11,6 +11,14 @@ $jumbotron-bg:                       white;
 
 @import 'bootstrap';
 
+body {
+     margin: 0;
+     background: url('http://i1294.photobucket.com/albums/b604/taylorf4/tb2_zps6d6158c2.jpeg') no-repeat center center;
+     background-size: 1440px 1200px;
+     display: compact;
+     font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+     background-attachment: scroll;
+}
 
 .center {
 	text-align: center;

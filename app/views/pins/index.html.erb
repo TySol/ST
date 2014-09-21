@@ -1,16 +1,18 @@
+<%= render 'pages/home' unless user_signed_in? %>
+
 <% if user_signed_in? %>
-<h1>Project Listings</h1>
+<h1>My Pins</h1>
   <%= link_to 'New Pin', new_pin_path %>
 <% end %>
 
 <div id="pins" class="transitions-enabled">
     <% @pins.each do |pin| %>
       <div class="box panel panel-dafault">
-        <% if pin.user == current_user %>
      <%= link_to image_tag(pin.image.url(:medium)), pin %>
           <div class="panel-body">
             <%= pin.description %><br/>
-            <%= pin.user.email if pin.user %>
+            <%= pin.user.name if pin.user %>
+           <% if pin.user == current_user %>
             <div class="actions">
            <%= link_to edit_pin_path(pin) do %>
               <span class="glyphicon glyphicon-edit"></span>
