@@ -20,9 +20,13 @@
   <div class="form-group">
     <h5 style="color:white"><%= f.label :description  %></h5>
     <%= f.text_field :description, class: "form-control" %>
-    <h5 style="color:white"><%= f.label :priority  %></h5>
+  </div>
+
+   <div class="form-group"> <h5 style="color:white"><%= f.label :priority  %></h5>
     <%= f.select :priority, options_for_select(%w[Normal High Highest]), class: "form-control"  %>
-    <h5 style="color:white"><%= f.label :type  %></h5>
+  </div>
+
+  <div class="form-group">   <h5 style="color:white"><%= f.label :type  %></h5>
     <%= f.select :type, options_for_select(%w[Feature Document Usability Bug]), class: "form-control" %>
   </div>
 
