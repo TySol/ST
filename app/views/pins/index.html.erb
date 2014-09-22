@@ -23,7 +23,7 @@
     <% @pins.each do |pin| %>
      <% if pin.user == current_user %>
         <tr>
-            <td><strong><%= pin.description %></strong> </td>
+            <td><div class="ellipsis" style="width: 600px; "><strong><%=  pin.description %></strong></div> </td>
             <td><%= pin.created_at %></td>
             <td><strong><%= pin.kind %></strong></td>
             <td><strong><%= pin.priority %></strong></td>

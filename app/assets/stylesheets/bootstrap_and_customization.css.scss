@@ -11,6 +11,7 @@ $jumbotron-bg:                       white;
 
 @import 'bootstrap';
 
+
 body {
      margin: 0;
      background: url('http://i1294.photobucket.com/albums/b604/taylorf4/e5f272f4-bb23-4dc5-b3f2-190b87a6cd33_zps51a2c854.jpg');
@@ -32,4 +33,18 @@ body {
 
 .navbar-brand {
 	font-weight: bold;
+}
+
+.table {
+  text-overflow: ellipsis; 
+  overflow: hidden; 
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ellipsis.multiline {
+  white-space: normal;
 }

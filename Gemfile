@@ -19,6 +19,7 @@ gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap'
 gem 'owlcarousel2-rails', github: 'oura/owlcarousel2-rails'
 gem 'activeadmin', github: 'activeadmin'
+gem "html_truncator", "~>0.2"
 
 group :development, :test do
      gem 'sqlite3'

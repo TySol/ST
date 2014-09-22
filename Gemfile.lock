@@ -100,6 +100,8 @@ GEM
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
     hike (1.2.3)
+    html_truncator (0.4.0)
+      nokogiri (~> 1.5)
     i18n (0.6.11)
     inherited_resources (1.4.1)
       has_scope (~> 0.6.0.rc)
@@ -212,6 +214,7 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   devise (~> 3.3.0)
+  html_truncator (~> 0.2)
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
