@@ -1,8 +1,11 @@
+<%= render 'pages/home' unless user_signed_in? %>
+
 <% if user_signed_in? %>
 <h1 style="color:white">My Project's Tasks</h1>
  <h4 style="color:white"> <%= link_to 'New Task', new_pin_path, :class => 'btn btn-mini btn-info' %> </h4>
 <% end %>
 
+<% if user_signed_in? %>
 <div class="panel panel-default">
 <table class="table table-striped">
   <thead>
@@ -14,6 +17,7 @@
       <th>Actions</th>
     </tr>
   </thead>
+<% end %>
 
   <tbody>
     <% @pins.each do |pin| %>

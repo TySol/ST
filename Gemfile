@@ -18,6 +18,7 @@ gem 'masonry-rails', '~> 0.2.1'
 gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap'
 gem 'owlcarousel2-rails', github: 'oura/owlcarousel2-rails'
+gem 'activeadmin', github: 'activeadmin'
 
 group :development, :test do
      gem 'sqlite3'
