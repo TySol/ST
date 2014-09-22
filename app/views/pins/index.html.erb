@@ -1,34 +1,36 @@
-<%= render 'pages/home' unless user_signed_in? %>
-
 <% if user_signed_in? %>
-<h1>My Pins</h1>
-  <%= link_to 'New Pin', new_pin_path %>
+<h1 style="color:white">My Project's Tasks</h1>
+ <h4 style="color:white"> <%= link_to 'New Task', new_pin_path, :class => 'btn btn-mini btn-info' %> </h4>
 <% end %>
 
-<div id="pins" class="transitions-enabled">
+<div class="panel panel-default">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Date Created</th>
+      <th>Type</th>
+      <th>Priority</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
     <% @pins.each do |pin| %>
-      <div class="box panel panel-dafault">
-     <%= link_to image_tag(pin.image.url(:medium)), pin %>
-          <div class="panel-body">
-            <%= pin.description %><br/>
-            <%= pin.user.name if pin.user %>
-           <% if pin.user == current_user %>
-            <div class="actions">
-           <%= link_to edit_pin_path(pin) do %>
-              <span class="glyphicon glyphicon-edit"></span>
-              Edit
-            <% end %>
-            <%= link_to pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
-              <span class="glyphicon glyphicon-trash"></span>
-              Delete
-            <% end %>
+     <% if pin.user == current_user %>
+        <tr>
+            <td><%= pin.description %></td>
+            <td><%= pin.created_at %></td>
+            <td></td>
+            <td></td>
+            <td>
+            <%= link_to 'Show', pin_path(pin), :class => 'btn btn-mini btn-default' %>
+            <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn btn-mini btn-default' %>
+            <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini btn-danger' %> 
+            </td>
             </div>
         <% end %>
       </div>
       </div>
     <% end %>
-</div>
-
-<div class="center">
-<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
 </div>

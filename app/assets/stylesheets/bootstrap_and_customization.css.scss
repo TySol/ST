@@ -13,11 +13,17 @@ $jumbotron-bg:                       white;
 
 body {
      margin: 0;
-     background: url('http://i1294.photobucket.com/albums/b604/taylorf4/tb2_zps6d6158c2.jpeg') no-repeat center center;
-     background-size: 1440px 1200px;
+     background: url('http://i1294.photobucket.com/albums/b604/taylorf4/e5f272f4-bb23-4dc5-b3f2-190b87a6cd33_zps51a2c854.jpg');
+     background-size: 1440px 500px;
+     background-repeat:no-repeat;
      display: compact;
      font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
      background-attachment: scroll;
+}
+
+.jumbotron {
+   background: rgb(200, 54, 54); /* This is for ie8 and below */
+   background: rgba(200, 54, 54, 0.5); 
 }
 
 .center {

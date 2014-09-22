@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/oura/owlcarousel2-rails.git
+  revision: edd7d75415f304dd5261e5ed1b6ed8af29c63b14
+  specs:
+    owlcarousel2-rails (2.0.0.beta.2.4)
+
+GIT
   remote: git://github.com/thoughtbot/paperclip.git
   revision: d5268f153c40318ce7e2929ab0e50d1203ac83a8
   specs:
@@ -164,6 +170,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   masonry-rails (~> 0.2.1)
+  owlcarousel2-rails!
   paperclip!
   pg
   rails (= 4.1.6)

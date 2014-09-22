@@ -12,16 +12,16 @@
   <% end %>
 
  <div class="form-group">
-    <%= f.label :image %>
+    <h5 style="color:white"><%= f.label :image  %></h5>
     <%= f.file_field :image, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :description %>
+    <h5 style="color:white"><%= f.label :description  %></h5>
     <%= f.text_field :description, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.submit class: "btn btn-primary" %>
+    <%= f.submit class: "btn btn-success" %>
   </div>
 <% end %>

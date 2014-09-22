@@ -17,6 +17,7 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'masonry-rails', '~> 0.2.1'
 gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap'
+gem 'owlcarousel2-rails', github: 'oura/owlcarousel2-rails'
 
 group :development, :test do
      gem 'sqlite3'
