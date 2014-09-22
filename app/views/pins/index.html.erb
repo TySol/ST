@@ -23,10 +23,10 @@
     <% @pins.each do |pin| %>
      <% if pin.user == current_user %>
         <tr>
-            <td><%= pin.description %></td>
+            <td><%= pin.description %> </td>
             <td><%= pin.created_at %></td>
-            <td></td>
-            <td></td>
+            <td><%= pin.type %></td>
+            <td><%= pin.priority %></td>
             <td>
             <%= link_to 'Show', pin_path(pin), :class => 'btn btn-mini btn-default' %>
             <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn btn-mini btn-default' %>
