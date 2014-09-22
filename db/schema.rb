@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140922155639) do
+ActiveRecord::Schema.define(version: 20140922211003) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -55,8 +55,8 @@ ActiveRecord::Schema.define(version: 20140922155639) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "type"
     t.string   "priority"
+    t.string   "kind"
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"

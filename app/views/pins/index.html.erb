@@ -12,7 +12,7 @@
     <tr>
       <th>Description</th>
       <th>Date Created</th>
-      <th>Type</th>
+      <th>Kind</th>
       <th>Priority</th>
       <th>Actions</th>
     </tr>
@@ -23,10 +23,10 @@
     <% @pins.each do |pin| %>
      <% if pin.user == current_user %>
         <tr>
-            <td><%= pin.description %> </td>
+            <td><strong><%= pin.description %></strong> </td>
             <td><%= pin.created_at %></td>
-            <td><%= pin.type %></td>
-            <td><%= pin.priority %></td>
+            <td><strong><%= pin.kind %></strong></td>
+            <td><strong><%= pin.priority %></strong></td>
             <td>
             <%= link_to 'Show', pin_path(pin), :class => 'btn btn-mini btn-default' %>
             <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn btn-mini btn-default' %>
