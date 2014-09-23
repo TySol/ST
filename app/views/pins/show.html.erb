@@ -8,9 +8,9 @@
       </div>
       <div class="panel-body">
         <p><strong><%= @pin.description %></strong></p>
-        <p><strong><%= @pin.kind %></strong></p>
-        <p><strong><%= @pin.priority %></strong></p>
-        <p><strong><%= @pin.user.email if @pin.user %></strong></p>
+        <p><strong><h5 style="color:#2C81DB"><%= @pin.kind %></h5></strong></p>
+        <p><strong><h5 style="color:#DB2C2C"><%= @pin.priority %></h5></strong></p>
+        
 
         <% if @pin.user == current_user %>
         <%= link_to edit_pin_path(@pin) do %>

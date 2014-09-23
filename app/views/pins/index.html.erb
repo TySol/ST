@@ -2,7 +2,7 @@
 
 <% if user_signed_in? %>
 <h1 style="color:white">My Project's Tasks</h1>
- <h4 style="color:white"> <%= link_to 'New Task', new_pin_path, :class => 'btn btn-mini btn-info' %> </h4>
+ <h4 style="color:white"> <%= link_to 'New Task', new_pin_path, :class => 'btn btn-mini btn-danger' %> </h4>
 <% end %>
 
 <% if user_signed_in? %>
@@ -10,11 +10,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Description</th>
-      <th>Date Created</th>
-      <th>Kind</th>
-      <th>Priority</th>
-      <th>Actions</th>
+      <th><h5 style="color:#2C81DB">Description</h5></th>
+      <th><h5>Date Created</h5></th>
+      <th><h5 style="color:#2CDB2C">Kind</h5></th>
+      <th><h5 style="color:#DB2C2C">Priority</h5></th>
+      <th><h5>Actions</h5></th>
     </tr>
   </thead>
 <% end %>
@@ -24,12 +24,12 @@
      <% if pin.user == current_user %>
         <tr>
             <td><div class="ellipsis" style="width: 600px; "><strong><%=  pin.description %></strong></div> </td>
-            <td><%= pin.created_at %></td>
+            <td><%= pin.created_at.strftime("%d %b. %Y") %></td>
             <td><strong><%= pin.kind %></strong></td>
             <td><strong><%= pin.priority %></strong></td>
             <td>
-            <%= link_to 'Show', pin_path(pin), :class => 'btn btn-mini btn-default' %>
-            <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn btn-mini btn-default' %>
+            <%= link_to 'Show', pin_path(pin), :class => 'btn btn-mini btn-success' %>
+            <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn btn-mini btn-info' %>
             <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini btn-danger' %> 
             </td>
             </div>
