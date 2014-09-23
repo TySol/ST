@@ -9,6 +9,6 @@ jQuery ($) ->
     autoWidth:true,
     items:4,
     autoplay:true,
-    autoplayTimeout:3000,
-    autoplayHoverPause:true
+    autoplayTimeout:2000,
+    autoplayHoverPause:false
 })
